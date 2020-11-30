@@ -161,7 +161,7 @@ const _ReactEditor = React.forwardRef((props: ReactEditorProps, ref: React.RefOb
       }
     };
 
-    editor.on('editor-change', (eventType: EventType, rangeOrDelta: Range | DeltaStatic, _: any, source: Sources) => {
+    editor.on('editor-change', (eventType: string, rangeOrDelta: Range | DeltaStatic, _: any, source: Sources) => {
       if (eventType === 'selection-change') {
         changeSelection(rangeOrDelta as Range, source, unprivilegedEditor);
       }
